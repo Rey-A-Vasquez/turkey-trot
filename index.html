@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the annual Fresno Turkey Trot on Thanksgiving morning! A fun 5K for all runners and walkers. Register today!">
     <title>Turkey Trot | Fresno</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <nav id="top">
+        <a href="#top"><img src="images/TURKEY.png" alt="Turkey Running Icon"><p>Turkey Trot</p></a>
         <ul>
-            <li><a href="#hero"><img src="images/TURKEY.png" alt="Turkey Running Icon"></a></li>
-        <div id="nav2">
             <li><a href="#detail">Event Details</a></li>
             <li><a href="#register">Register</a></li>
             <li><a href="#volunteer">Volunteer</a></li>
             <li><a href="#contact">Contact Us</a></li>
-        </div>
         </ul>
     </nav>
     <main>
         <section id="hero">
             <h1>TIME BEFORE THE TURKEY TROT BEGINS</h1>
-            <figure id="timer">
+            <div id="timer">
                 <p>Days</p>
                 <p>Hours</p>
                 <p>Minutes</p>
                 <p>Seconds</p>
-            </figure>
+            </div>
             <a href="#register">Register Now!</a>
         </section>
-    <article>
+    <section id="detail">
             <h2>Event Details [Fresno]</h2>
             <section>
                 <h3>What exactly is a Turkey Trot? Why should I sign up?</h3>
                 <p>Think of it as the official warm-up for Thanksgiving! A Turkey Trot is a fun, festive 5K road race that takes place on Thanksgiving morning!</p>
-                <h4>But I'm not a "runner"...</h4>
+                <h3>But I'm not a "runner"...</h3>
                 <p>That's the best part—you don't have to be! A Turkey Trot is all about the community spirit. You'll see elite runners, families walking with cocoa, kids in turkey hats, and coworkers jogging together. It's the one race of the year where having fun is more important than finishing fast.</p>
-                <h4>So, why do people do it?</h4>
+                <h3>So, why do people do it?</h3>
                 <ul>
                     <li>To "run before the stuffin'!"</li>
                     <li>To have fun and create a healthy holiday tradition with family and friends!</li>
@@ -57,42 +59,90 @@
             </section>
             <section>
                 <h3>Location</h3>
-                <p>Woodward Park Mountain View Shelter<br>7775 N Friant Rd<br>Fresno, CA 93720 US</p>
+                <address>
+                    Woodward Park Mountain View Shelter<br>7775 N Friant Rd<br>Fresno, CA 93720 US
+                </address>
             </section>
-    </article>
-    <section>
-        <h3>Registration Form</h3>
+        </section>
+    <section id="register">
+        <h2>Registration Form</h2>
         <form>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="First Name...">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Last Name...">
-            <label for="Age">Birthday</label>
-            <input type="date" name="Age" id="Age">
-            <label for="Email">Email</label>
-            <input type="email" name="Email" id="Email" placeholder="Email...">
-            <label for="Number">Phone Number</label>
-            <input type="number" name="Number" id="Number" placeholder="Number...">
+            <label for="rfname">First Name</label>
+            <input type="text" id="rfname" name="rfname" placeholder="First Name..." required>
+
+            <label for="rlname">Last Name</label>
+            <input type="text" id="rlname" name="rlname" placeholder="Last Name..." required>
+
+            <label for="rAge">Birthday</label>
+            <input type="date" name="rAge" id="rAge" required>
+
+            <label for="rEmail">Email</label>
+            <input type="email" name="rEmail" id="rEmail" placeholder="Email..." required>
+            
+            <label for="rNumber">Phone Number</label>
+            <input type="tel" name="rNumber" id="rNumber" placeholder="(###)###-####">
+            
             <input type="submit" value="submit">
             <small>(5 dollar entry fee to be paid on site)</small>
         </form>
     </section>
-    <section>
-        <h3>Volunteer Form</h3>
+    <section id="volunteer">
+        <h2>Volunteer Form</h2>
         <form>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="First Name...">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Last Name...">
-            <label for="Age">Birthday</label>
-            <input type="date" name="Age" id="Age">
-            <label for="Email">Email</label>
-            <input type="email" name="Email" id="Email" placeholder="Email...">
-            <label for="Number">Phone Number</label>
-            <input type="number" name="Number" id="Number" placeholder="Number...">
+            <label for="vfname">First Name</label>
+            <input type="text" id="vfname" name="vfname" placeholder="First Name..." required>
+
+            <label for="vlname">Last Name</label>
+            <input type="text" id="vlname" name="vlname" placeholder="Last Name..." required>
+
+            <label for="vAge">Birthday</label>
+            <input type="date" name="vAge" id="vAge" required>
+
+            <label for="vEmail">Email</label>
+            <input type="email" name="vEmail" id="vEmail" placeholder="Email..." required>
+
+            <label for="vNumber">Phone Number</label>
+            <input type="tel" name="vNumber" id="vNumber" placeholder="(###)###-####">
+
+            <label for="Roles">Choose Your Role</label>
+            <select name="Roles" id="Roles" required>
+                <option value="">-</option>
+                <option value="clean">Clean-Up Crew</option>
+                <option value="drink">Drink Distributor</option>
+                <option value="bib">Bib Handler</option>
+            </select>
+
             <input type="submit" value="submit">
         </form>
     </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="cfname">First Name</label>
+            <input type="text" id="cfname" name="cfname" placeholder="First Name...">
+
+            <label for="clname">Last Name</label>
+            <input type="text" id="clname" name="clname" placeholder="Last Name...">
+
+            <label for="cEmail">Email</label>
+            <input type="email" name="cEmail" id="cEmail" placeholder="Email..." required>
+            
+            <label for="cNumber">Phone Number</label>
+            <input type="tel" name="cNumber" id="cNumber" placeholder="(###)###-####">
+            
+            <label for="cMessage">Message</label>
+            <textarea name="cMessage" id="cMessage" placeholder="Message..." required></textarea>
+
+            <input type="submit" value="submit" id="csubmit">
+        </form>
+    </section>
+    <aside>
+        <img src="images/THERO.jpg" alt="People running the Turkey Trot">
+    </aside>
     </main>
+    <footer>
+        <a href="#top"><img src="images/up.png" alt="Scroll to Top Icon"></a>
+        <small>©2025 Turkey Trot Fresno</small>
+    </footer>
 </body>
 </html>
