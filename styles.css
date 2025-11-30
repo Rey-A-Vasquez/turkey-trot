@@ -16,7 +16,7 @@ main {
     grid-row: 2;
     display: grid;
     grid-template-rows: repeat(6,max-content);
-    gap: 5vh;
+    gap: 8vh;
 }
 
 /*Removing decorations on all links and lists on the document */
@@ -100,6 +100,7 @@ nav li a:hover {
     background-color: #c2a384a6;
     height: 60vh;
     width: 75vw;
+    border-radius: 10px;
 }
 
         h1 {
@@ -227,17 +228,7 @@ address {
     border-bottom-right-radius: 10px;
 }
 
-/*Register Section*/
-#register {
-    grid-row: 3;
-}
-
-#register small {
-    text-align: center;
-    margin-bottom: 1vh;
-}
-
-/*Applicable to Register and Volunteer (maybe contact too)*/
+/*Applicable to Register, Volunteer, &/or contact*/
 #register,
 #volunteer {
     margin: 0 15%;
@@ -251,31 +242,93 @@ address {
     border: solid 5px black
 }
 
+#register h2,
+#volunteer h2,
+#contact h2 {
+    margin: 5vh 0;
+}
+
 form {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.formvert {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-}
-
-.formrow {
+.formrow,
+.contactrow {
     display: flex;
     width: 80%;
     justify-content: space-between;
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
 }
 
+form,
+.formvert,
+.formvert2,
+.formvert1 {
+    display: flex;
+    flex-direction: column;
+}
 
-input::placeholder {
+.formvert2 {
+    width: 45%;
+}
+
+.formvert1 {
+    width: 35%;
+}
+
+.formvert1:last-of-type {
+    width: 20%;
+}
+
+.formvert {
+    width:80%;
+}
+
+input::placeholder,
+input,
+textarea::placeholder,
+textarea,
+[type=date],
+select {
     font-family: roboto;
+    font-size: 1.05rem;
 }
+
+label {
+    font-weight: 500;
+}
+
+div input,
+select {
+    height: 5vh;
+    border-radius: 5px;
+    border: solid 1.5px black;
+}
+
+select {
+    height: 6.5vh;
+}
+
+div input:focus,
+textarea:focus {
+    outline: none;
+    border: solid 1.5px #DBBA33;
+}
+
+/*Register Section*/
+#register {
+    grid-row: 3;
+}
+
+#register small {
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
 /*Submit button for register and volunteer*/
-[value=submit]:not(#csubmit){
+#rsubmit,
+#vsubmit,
+#csubmit {
     width: 80%;
     background-color: #DBBA33;
     font-size: 1.3rem;
@@ -285,10 +338,16 @@ input::placeholder {
     border: solid 2px black
 }
 
-#register [value=submit]:hover,
-#volunteer [value=submit]:hover {
+#rsubmit:hover,
+#vsubmit:hover {
     cursor: pointer;
     background-color: #caab30;
+}
+
+#vsubmit,
+#csubmit {
+    margin-top: 4%;
+    margin-bottom: 10vh;
 }
 
 /*Volunteer Section*/
@@ -300,6 +359,27 @@ input::placeholder {
 #contact {
     grid-row: 5;
     background-color: #DBBB96;
+    margin: 0 8%;
+}
+
+.contactrow .formvert {
+    width: 47%;
+}
+
+textarea {
+    resize: none;
+    height: 15vh;
+    border: solid 1.5px black;
+    border-radius: 5px;
+}
+
+#csubmit {
+    background-color: #B6562A;
+}
+
+#csubmit:hover {
+    background-color: #a74f26;
+    cursor: pointer;
 }
 
 /*Turkey Trot Image*/
@@ -308,12 +388,14 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
 }
 
 aside img {
     height: 55vh;
     border-radius: 5px;
 }
+
 /*Footer*/
 footer {
     display: flex;
@@ -350,4 +432,13 @@ footer small {
 
 #Arrow:hover {
     background-color: #c4a52d;
+}
+
+/*Turkey background*/
+#BackTurkey {
+    position: fixed;
+    top:6%;
+    left:25%;
+    z-index: -1;
+    opacity: 0.5;
 }
