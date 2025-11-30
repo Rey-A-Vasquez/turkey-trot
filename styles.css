@@ -38,6 +38,7 @@ nav {
     justify-content: space-between;
 }
 
+/*Styling Logo*/
 #TURKEY {
     height: 5vh;
     margin-right: 1vw;
@@ -52,12 +53,29 @@ nav > a {
     font-size: larger;
 }
 
+/*Styling the navigation links*/
 nav ul {
     display: flex;
     margin-right: 1vw;
     width: 40vw;
     justify-content: space-evenly;
     color: black;
+}
+
+nav li a {
+    color: #DBBA33;
+    font-weight: 500;
+    padding: 1vh 1vw;
+    border-bottom: solid 2px black;
+}
+
+nav li a:hover {
+    background-color: #DBBA33;
+    color: black;
+    border-bottom: none;
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.164);
+    font-size: 1.02rem;
 }
 
 /*Hero Image with CTA*/
@@ -102,11 +120,11 @@ nav ul {
         }
 
         .time-box {
-            background: rgba(255, 255, 255, 0.1);
+            background: #dbbb96c7;
             border-radius: 8px;
-            padding: 1.5rem 2rem;
+            padding: 5vh 1vw;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            min-width: 100px;
+            min-width: 8vw;
         }
 
         .time {
@@ -122,12 +140,28 @@ nav ul {
             letter-spacing: 1px;
         }
 
+    /*Styling the CTA "button"*/
+    #CTA > a {
+        background-color: #DBBA33;
+        color: black;
+        font-size:x-large;
+        font-weight: 500;
+        margin-top: 7vh;
+        padding: 2vh 10vw;
+        border-radius: 5px;
+    }
+
+    #CTA > a:hover {
+        background-color: #c4a52d;
+        font-size: 1.6rem;
+    }
+
 /*Details about the Event section*/
 #detail {
     grid-area: 2;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
-    grid-template-rows: max-content 3fr 1fr;
+    grid-template-rows: max-content 3fr 2fr;
 }
 
 #detail h2,
@@ -136,22 +170,54 @@ nav ul {
 #detail3 {
     background-color: #DBBB96;
 }
+
 #detail h2 {
     grid-area: 1 / 2 / 2 / 4;
     margin-block: 0;
     text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 2vh;;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: solid 5px black;
+}
+
+#detail1,
+#detail2, 
+#detail3 {
+    padding: 0 10%;
+    border: solid 5px black;
+    border-top: 0;
 }
 
 #detail1 {
     grid-area: 2/2/4/3;
+    border-right: solid 2.5px black;
 }
 
 #detail2 {
     grid-area: 2/3/3/4;
+    border-left: solid 2.5px black;
+}
+
+#detail2 li {
+    padding: 3% 0;
+}
+
+#detail2 h3,
+#detail3 h3 {
+    text-align: center;
+}
+
+address {
+    text-align: center;
+    font-size: large;
+    line-height: 2rem;
 }
 
 #detail3 {
     grid-area: 3/3/4/4;
+    border-left: solid 2.5px black;
 }
 
 /*Register Section*/
@@ -175,17 +241,31 @@ nav ul {
 /*Turkey Trot Image*/
 aside {
     grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 aside img {
     height: 55vh;
+    border-radius: 5px;
 }
 /*Footer*/
 footer {
+    display: flex;
     grid-row: 3;
     background-color: #B6562A;
+    justify-content: center;
+    align-items: center;
+    color: #DBBA33;
+    font-weight: 500;
 }
 
+footer small {
+    justify-self: center;
+}
+
+/*Styling for Up Icon that will stay on the bottom right corner*/
 #Arrow img {
     width: 2.5vw;
     margin-bottom: .5vw;
