@@ -82,21 +82,33 @@
     <section id="register">
         <h2>Registration Form</h2>
         <form>
+
+        <div class="formrow">
+            <div class="formvert">
             <label for="rfname">First Name</label>
-            <input type="text" id="rfname" name="rfname" placeholder="First Name..." required>
-
+            <input type="text" id="rfname" class="name" name="rfname" placeholder="First Name..." required>
+            </div>
+            <div class="formvert">
             <label for="rlname">Last Name</label>
-            <input type="text" id="rlname" name="rlname" placeholder="Last Name..." required>
-
+            <input type="text" id="rlname" class="name" name="rlname" placeholder="Last Name..." required>
+            </div>
+            <div class="formvert">
             <label for="rAge">Birthday</label>
             <input type="date" name="rAge" id="rAge" required>
+            </div>
+        </div>
 
+        <div class="formrow">
+            <div class="formvert">
             <label for="rEmail">Email</label>
             <input type="email" name="rEmail" id="rEmail" placeholder="Email..." required>
-            
+            </div>
+            <div class="formvert">
             <label for="rNumber">Phone Number</label>
             <input type="tel" name="rNumber" id="rNumber" placeholder="(###)###-####">
-            
+            </div>
+        </div>
+
             <input type="submit" value="submit">
             <small>(5 dollar entry fee to be paid on site)</small>
         </form>
@@ -104,21 +116,34 @@
     <section id="volunteer">
         <h2>Volunteer Form</h2>
         <form>
+
+        <div class="formrow">
+        <div class="formvert">
             <label for="vfname">First Name</label>
-            <input type="text" id="vfname" name="vfname" placeholder="First Name..." required>
-
+            <input type="text" id="vfname" class="name" name="vfname" placeholder="First Name..." required>
+        </div>
+        <div class="formvert">
             <label for="vlname">Last Name</label>
-            <input type="text" id="vlname" name="vlname" placeholder="Last Name..." required>
-
+            <input type="text" id="vlname" class="name" name="vlname" placeholder="Last Name..." required>
+        </div>
+        <div class="formvert">
             <label for="vAge">Birthday</label>
             <input type="date" name="vAge" id="vAge" required>
+        </div>
+        </div>
 
+        <div class="formrow">
+        <div class="formvert">
             <label for="vEmail">Email</label>
             <input type="email" name="vEmail" id="vEmail" placeholder="Email..." required>
-
+        </div>
+        <div class="formvert">
             <label for="vNumber">Phone Number</label>
             <input type="tel" name="vNumber" id="vNumber" placeholder="(###)###-####">
+        </div>
+        </div>
 
+        <div class="formvert">
             <label for="Roles">Choose Your Role</label>
             <select name="Roles" id="Roles" required>
                 <option value="">-</option>
@@ -126,28 +151,40 @@
                 <option value="drink">Drink Distributor</option>
                 <option value="bib">Bib Handler</option>
             </select>
-
+        </div>
             <input type="submit" value="submit">
         </form>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
         <form>
+
+            <div class="contactrow">
+            <div class="formvert">
             <label for="cfname">First Name</label>
             <input type="text" id="cfname" name="cfname" placeholder="First Name...">
-
+            </div>
+            <div class="formvert">
             <label for="clname">Last Name</label>
             <input type="text" id="clname" name="clname" placeholder="Last Name...">
+            </div>
+            </div>
 
+            <div class="contactrow">
+            <div class="formvert">
             <label for="cEmail">Email</label>
             <input type="email" name="cEmail" id="cEmail" placeholder="Email..." required>
-            
+            </div>
+            <div class="formvert">
             <label for="cNumber">Phone Number</label>
             <input type="tel" name="cNumber" id="cNumber" placeholder="(###)###-####">
-            
+            </div>
+            </div>
+
+            <div class="formvert">
             <label for="cMessage">Message</label>
             <textarea name="cMessage" id="cMessage" placeholder="Message..." required></textarea>
-
+            </div>
             <input type="submit" value="submit" id="csubmit">
         </form>
     </section>

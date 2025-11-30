@@ -15,7 +15,7 @@ body {
 main {
     grid-row: 2;
     display: grid;
-    grid-template-rows: 80vh 120vh 50vh 50vh 50vh 60vh;
+    grid-template-rows: repeat(6,max-content);
     gap: 5vh;
 }
 
@@ -88,6 +88,7 @@ nav li a:hover {
     background-position: center top;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 /*Timer*/
@@ -156,11 +157,16 @@ nav li a:hover {
         font-size: 1.6rem;
     }
 
+/*true for all h2*/
+h2 {
+    text-align: center;
+}
+
 /*Details about the Event section*/
 #detail {
     grid-area: 2;
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-rows: max-content 3fr 2fr;
 }
 
@@ -174,7 +180,6 @@ nav li a:hover {
 #detail h2 {
     grid-area: 1 / 2 / 2 / 4;
     margin-block: 0;
-    text-align: center;
     padding-top: 5vh;
     padding-bottom: 2vh;;
     border-top-left-radius: 10px;
@@ -193,6 +198,7 @@ nav li a:hover {
 #detail1 {
     grid-area: 2/2/4/3;
     border-right: solid 2.5px black;
+    border-bottom-left-radius: 10px;
 }
 
 #detail2 {
@@ -218,18 +224,76 @@ address {
 #detail3 {
     grid-area: 3/3/4/4;
     border-left: solid 2.5px black;
+    border-bottom-right-radius: 10px;
 }
 
 /*Register Section*/
 #register {
     grid-row: 3;
+}
+
+#register small {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+/*Applicable to Register and Volunteer (maybe contact too)*/
+#register,
+#volunteer {
+    margin: 0 15%;
     background-color: #C8945D;
+}
+
+#register,
+#contact,
+#volunteer {
+    border-radius: 10px;
+    border: solid 5px black
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formvert {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.formrow {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+
+input::placeholder {
+    font-family: roboto;
+}
+/*Submit button for register and volunteer*/
+[value=submit]:not(#csubmit){
+    width: 80%;
+    background-color: #DBBA33;
+    font-size: 1.3rem;
+    padding: 1vh 0;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    border: solid 2px black
+}
+
+#register [value=submit]:hover,
+#volunteer [value=submit]:hover {
+    cursor: pointer;
+    background-color: #caab30;
 }
 
 /*Volunteer Section*/
 #volunteer {
     grid-row: 4;
-    background-color: #C8945D;
 }
 
 /*Contact Section*/
