@@ -70,6 +70,8 @@ nav ul {
     background-position: center top;
 }
 
+/*Timer*/
+
 /*Details about the Event section*/
 #detail {
     grid-area: 2;
