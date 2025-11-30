@@ -3,3 +3,155 @@ html {
     font-family: Roboto;
 }
 
+/*Setting the rows of the body and main with grid*/
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 8vh 1fr 10vh;
+    grid-template-columns: 100%;
+    background-color: #F1E4AE;
+}
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 75vh 120vh 50vh 50vh 50vh 60vh;
+    gap: 5vh;
+}
+
+/*Removing decorations on all links and lists on the document */
+a {
+    text-decoration: none;
+}
+
+ul:not(#reasons) {
+    list-style:none;
+    padding: 0;
+}
+
+/*Navigation Bar*/
+nav {
+    grid-row: 1;
+    display: flex;
+    background-color: #B6562A;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#TURKEY {
+    height: 5vh;
+    margin-right: 1vw;
+}
+
+nav > a {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 1vw;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 1vw;
+    width: 40vw;
+    justify-content: space-evenly;
+    color: black;
+}
+
+/*Hero Image with CTA*/
+#hero {
+    grid-row: 1;
+    display: flex;
+    background-image: url(images/THERO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+/*Details about the Event section*/
+#detail {
+    grid-area: 2;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: max-content 3fr 1fr;
+}
+
+#detail h2,
+#detail1,
+#detail2,
+#detail3 {
+    background-color: #DBBB96;
+}
+#detail h2 {
+    grid-area: 1 / 2 / 2 / 4;
+    margin-block: 0;
+    text-align: center;
+}
+
+#detail1 {
+    grid-area: 2/2/4/3;
+}
+
+#detail2 {
+    grid-area: 2/3/3/4;
+}
+
+#detail3 {
+    grid-area: 3/3/4/4;
+}
+
+/*Register Section*/
+#register {
+    grid-row: 3;
+    background-color: #C8945D;
+}
+
+/*Volunteer Section*/
+#volunteer {
+    grid-row: 4;
+    background-color: #C8945D;
+}
+
+/*Contact Section*/
+#contact {
+    grid-row: 5;
+    background-color: #DBBB96;
+}
+
+/*Turkey Trot Image*/
+aside {
+    grid-row: 6;
+}
+
+aside img {
+    height: 55vh;
+}
+/*Footer*/
+footer {
+    grid-row: 3;
+    background-color: #B6562A;
+}
+
+#Arrow img {
+    width: 2.5vw;
+    margin-bottom: .5vw;
+}
+
+#Arrow {
+    background-color: #DBBA33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 4vw;
+    height: 4vw;
+    position:fixed;
+    bottom: 1vw;
+    right: 1vw;
+}
+
+#Arrow:hover {
+    background-color: #c4a52d;
+}
