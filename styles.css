@@ -72,6 +72,49 @@ nav ul {
 
 /*Timer*/
 
+        h1 {
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Added to show the target date for debugging */
+        #target-date {
+            font-weight: 400;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .countdown-container {
+            display: flex;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+        }
+
+        .time {
+            font-size: 3.5rem;
+            font-weight: 600;
+            display: block;
+            line-height: 1;
+        }
+
+        .label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
 /*Details about the Event section*/
 #detail {
     grid-area: 2;
