@@ -15,7 +15,7 @@ body {
 main {
     grid-row: 2;
     display: grid;
-    grid-template-rows: 75vh 120vh 50vh 50vh 50vh 60vh;
+    grid-template-rows: 80vh 120vh 50vh 50vh 50vh 60vh;
     gap: 5vh;
 }
 
@@ -68,12 +68,23 @@ nav ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Timer*/
 
+#CTA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c2a384a6;
+    height: 60vh;
+    width: 75vw;
+}
+
         h1 {
-            font-weight: 300;
+            font-weight: 500;
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -81,15 +92,12 @@ nav ul {
 
         /* Added to show the target date for debugging */
         #target-date {
-            font-weight: 400;
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-bottom: 2rem;
+            display: none;
         }
 
         .countdown-container {
             display: flex;
-            gap: 1.5rem;
+            gap: 1vw;
             text-align: center;
         }
 
@@ -112,7 +120,6 @@ nav ul {
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            opacity: 0.8;
         }
 
 /*Details about the Event section*/
