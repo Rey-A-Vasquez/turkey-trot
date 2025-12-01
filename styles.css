@@ -394,7 +394,7 @@ aside {
 }
 
 aside img {
-    height: 55vh;
+    width: 50%;
     border-radius: 5px;
 }
 
@@ -558,6 +558,11 @@ footer small {
         margin-bottom: 10vh;
     }
 
+    /*Turkey Trot image*/
+    aside img {
+        width: 70%;
+    }
+
     /*Styling for Up Icon that will stay on the bottom right corner*/
     #Arrow img {
         width: 7vw;
@@ -715,12 +720,6 @@ footer small {
         margin-bottom: 4vh;
     }
 
-    /*Turkey Trot image*/
-    aside img {
-        height: 48vh;
-        border-radius: 5px;
-    }
-
     /*Styling for Up Icon that will stay on the bottom right corner*/
     #Arrow img {
         width: 7vw;
@@ -744,6 +743,7 @@ footer small {
     }
 }
 
+/*Screen size below 576px*/
 @media screen and (max-width:576px) {
     body {
         background-color: lightgreen;
@@ -756,5 +756,155 @@ footer small {
 
     nav > a p {
         display: none;
+    }
+
+        /*Hero Image with CTA*/
+    #hero {
+        height: 68vh;
+    }
+
+    /*Timer*/
+    #CTA {
+        height: 52vh;
+        width: 85vw;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .countdown-container {
+        gap: 2vw;
+    }
+
+    .time-box {
+        padding: 5vh 3vw;
+        min-width: 10vw;
+    }
+
+    .time {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    /*Styling the CTA "button"*/
+    #CTA > a {
+        font-size:x-large;
+        font-weight: 500;
+        margin-top: 5vh;
+        padding: 2vh 20vw;
+    }
+
+    #CTA > a:hover {
+        font-size: 1.6rem;
+    }
+
+    /*Details Section*/
+    #detail {
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+    }
+
+    #detail h2 {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-block: 0;
+        padding-top: 5vh;
+        padding-bottom: 2vh;;
+    }
+
+    #detail1,
+    #detail2, 
+    #detail3 {
+        padding: 8% 10%;
+        border: solid 5px black;
+        border-top: 0;
+    }
+
+    #detail1 {
+        grid-area: 2/2/3/3;
+        border-bottom-left-radius: 0px;
+    }
+
+    #detail2 {
+        grid-area: 3/2/4/3;
+    }
+
+    #detail2 li {
+        padding: 3% 0;
+    }
+
+    #detail3 {
+        grid-area: 4/2/5/3;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding-top: 4%;
+    }
+
+    /*Register and Volunteer forms Section*/
+    #register h2,
+    #volunteer h2,
+    #contact h2 {
+        margin: 5vh 0;
+    }
+
+    .formrow,
+    .contactrow {
+        flex-wrap: wrap;
+        margin-bottom: 0vh;
+    }
+
+    .formvert1,
+    .formvert2 {
+        width: 100%;
+        margin-bottom: 4vh;
+    }
+
+    .formvert1:last-of-type {
+        margin-top: 0vh;
+    }
+
+    #vsubmit,
+    #csubmit {
+        margin-top: 8%;
+        margin-bottom: 10vh;
+    }
+
+    /*Styling Contact*/
+    .contactrow .formvert {
+        width: 100%;
+        margin-bottom: 4vh;
+    }
+
+    /*Turkey Trot image*/
+    aside img {
+        width:80%
+    }
+
+    /*Styling for Up Icon that will stay on the bottom right corner*/
+    #Arrow img {
+        width: 7vw;
+        margin-bottom: 1vw;
+    }
+
+    #Arrow {
+        width: 10vw;
+        height: 10vw;
+        bottom: 1vw;
+        right: 1vw;
+    }
+
+    /*Turkey background*/
+    #BackTurkey {
+        width: 70vw;
+        top:6%;
+        left:15%;
+        z-index: -1;
+        opacity: 0.5;
     }
 }
