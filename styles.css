@@ -597,6 +597,7 @@ footer small {
     /*Hero Image with CTA*/
     #hero {
         height: 68vh;
+        background-image: url(images/THERO-min.jpg);
     }
 
     /*Timer*/
@@ -758,6 +759,7 @@ footer small {
         /*Hero Image with CTA*/
     #hero {
         height: 45vh;
+        background-image: url(images/THERO-min.jpg);
     }
 
     /*Timer*/
